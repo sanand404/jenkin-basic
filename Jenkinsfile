@@ -9,7 +9,7 @@ pipeline {
                    def version = readFile "version"
                    sh 'echo $version'
                 }
-                sh 'echo pwd'
+                sh 'pwd'
                 sh 'mvn --version'
             }
         }
