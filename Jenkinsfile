@@ -9,7 +9,7 @@ pipeline {
                     version = readFile "version"
                 }
                 sh 'mvn --version'
-                sh 'echo version'
+                sh 'echo $version'
             }
         }
     }
