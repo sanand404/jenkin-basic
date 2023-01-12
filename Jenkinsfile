@@ -6,7 +6,7 @@ pipeline {
         stage('build') {
             steps {
                 script {
-                    version = load "version"
+                    version = readFile "version"
                 }
                 sh 'mvn --version'
                 sh 'echo version'
