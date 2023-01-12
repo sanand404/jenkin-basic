@@ -7,8 +7,7 @@ pipeline {
             steps {
                 script {
                    def version = readFile "version"
-                   env.version = version
-                   sh 'echo version()'
+                   println ${version}
                 }
                 sh 'mvn --version'
             }
