@@ -6,9 +6,9 @@ pipeline {
         stage('build') {
             steps {
                 script {
-                   def version = readFile "version"
+                   def version = readFile(file: "version")
+                   echo version
                 }
-                echo version
                 sh 'mvn --version'
             }
         }
