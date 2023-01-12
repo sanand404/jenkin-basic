@@ -10,6 +10,7 @@ pipeline {
                    sh 'echo $version'
                 }
                 sh 'pwd'
+                sh 'ls'
                 sh 'mvn --version'
             }
         }
