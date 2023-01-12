@@ -1,10 +1,10 @@
 /* Requires the Docker Pipeline plugin */
 
 pipeline {
-    agent { docker { image 'maven:3.8.7-eclipse-temurin-11' } }
+    agent { docker { name: 'asible', image 'maven:3.8.7-eclipse-temurin-11' } }
     stages {
         stage('build') {
-            steps {
+            container('ansible') {
                 script {
                    def version = readFile(file: "version")
                    echo version
