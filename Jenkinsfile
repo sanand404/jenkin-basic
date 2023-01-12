@@ -8,10 +8,8 @@ pipeline {
                 script {
                    def version = readFile "version"
                    env.version = version
+                   sh 'echo version()'
                 }
-                sh 'pwd'
-                sh 'ls'
-                sh 'echo $version'
                 sh 'mvn --version'
             }
         }
